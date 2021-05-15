@@ -48,7 +48,7 @@ function update() {
 
 function buyPickaxe() {
     let modified = 0
-    if (cheese > 10) {
+    if (cheese >= 10) {
         cheese -= clickUpgrades.pickaxe.price
         clickUpgrades.pickaxe.quantity++
         clickUpgrades.pickaxe.multiplier += clickUpgrades.pickaxe.multiplier
@@ -67,7 +67,7 @@ function buyPickaxe() {
 
 function buyDualWield() {
     let modified = 0
-    if (cheese > 25) {
+    if (cheese >= 25) {
         cheese -= clickUpgrades.dualWield.price
         clickUpgrades.dualWield.quantity++
         clickUpgrades.dualWield.multiplier += clickUpgrades.dualWield.multiplier
@@ -84,7 +84,7 @@ function buyDualWield() {
 
 function buyRovers() {
     let modified = 0
-    if (cheese > 60) {
+    if (cheese >= 60) {
         cheese -= automaticUpgrades.rovers.price
         automaticUpgrades.rovers.quantity++
         automaticUpgrades.rovers.multiplier += automaticUpgrades.rovers.multiplier
@@ -100,7 +100,7 @@ function buyRovers() {
 
 function buyMiners() {
     let modified = 0
-    if (cheese > 70) {
+    if (cheese >= 70) {
         cheese -= automaticUpgrades.miners.price
         automaticUpgrades.miners.quantity++
         automaticUpgrades.miners.multiplier += automaticUpgrades.miners.multiplier
