@@ -5,12 +5,12 @@ let passiveCheese = 0
 
 let clickUpgrades = {
     pickaxe: {
-        price: 100,
+        price: 10,
         quantity: 0,
         multiplier: 2
     },
     dualWield: {
-        price: 250,
+        price: 25,
         quantity: 0,
         multiplier: 3,
     }
@@ -18,12 +18,12 @@ let clickUpgrades = {
 
 let automaticUpgrades = {
     rovers: {
-        price: 600,
+        price: 60,
         quantity: 0,
         multiplier: 20
     },
     miners: {
-        price: 700,
+        price: 70,
         quantity: 0,
         multiplier: 22
     }
@@ -48,7 +48,7 @@ function update() {
 
 function buyPickaxe() {
     let modified = 0
-    if (cheese > 100) {
+    if (cheese > 10) {
         cheese -= clickUpgrades.pickaxe.price
         clickUpgrades.pickaxe.quantity++
         clickUpgrades.pickaxe.multiplier += clickUpgrades.pickaxe.multiplier
@@ -67,7 +67,7 @@ function buyPickaxe() {
 
 function buyDualWield() {
     let modified = 0
-    if (cheese > 250) {
+    if (cheese > 25) {
         cheese -= clickUpgrades.dualWield.price
         clickUpgrades.dualWield.quantity++
         clickUpgrades.dualWield.multiplier += clickUpgrades.dualWield.multiplier
@@ -84,7 +84,7 @@ function buyDualWield() {
 
 function buyRovers() {
     let modified = 0
-    if (cheese > 600) {
+    if (cheese > 60) {
         cheese -= automaticUpgrades.rovers.price
         automaticUpgrades.rovers.quantity++
         automaticUpgrades.rovers.multiplier += automaticUpgrades.rovers.multiplier
@@ -100,7 +100,7 @@ function buyRovers() {
 
 function buyMiners() {
     let modified = 0
-    if (cheese > 700) {
+    if (cheese > 70) {
         cheese -= automaticUpgrades.miners.price
         automaticUpgrades.miners.quantity++
         automaticUpgrades.miners.multiplier += automaticUpgrades.miners.multiplier
