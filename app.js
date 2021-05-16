@@ -51,11 +51,13 @@ function buyPickaxe() {
     if (cheese >= 10) {
         cheese -= clickUpgrades.pickaxe.price
         clickUpgrades.pickaxe.quantity++
-
+        clickUpgrades.pickaxe.multiplier += 2
         modifiers += clickUpgrades.pickaxe.multiplier
         clickUpgrades.pickaxe.price += clickUpgrades.pickaxe.price
         document.getElementById("pickaxe").innerText = clickUpgrades.pickaxe.quantity
+
         document.getElementById("pickaxeprice").innerText = clickUpgrades.pickaxe.price
+
         document.getElementById("pickaxemodifier").innerText = clickUpgrades.pickaxe.multiplier
     }
 
@@ -70,7 +72,7 @@ function buyDualWield() {
     if (cheese >= 25) {
         cheese -= clickUpgrades.dualWield.price
         clickUpgrades.dualWield.quantity++
-
+        clickUpgrades.dualWield.multiplier += 3
         modifiers += clickUpgrades.dualWield.multiplier
         clickUpgrades.dualWield.price += clickUpgrades.dualWield.price
         document.getElementById("dualwield").innerText = clickUpgrades.dualWield.quantity
@@ -87,7 +89,7 @@ function buyRovers() {
     if (cheese >= 60) {
         cheese -= automaticUpgrades.rovers.price
         automaticUpgrades.rovers.quantity++
-
+        automaticUpgrades.rovers.multiplier += 60
         passiveCheese += automaticUpgrades.rovers.multiplier
         automaticUpgrades.rovers.price += automaticUpgrades.rovers.price
         document.getElementById("rovers").innerText = automaticUpgrades.rovers.quantity
@@ -103,7 +105,7 @@ function buyMiners() {
     if (cheese >= 70) {
         cheese -= automaticUpgrades.miners.price
         automaticUpgrades.miners.quantity++
-
+        automaticUpgrades.miners.multiplier += 70
         passiveCheese += automaticUpgrades.miners.multiplier
         automaticUpgrades.miners.price += automaticUpgrades.miners.price
         document.getElementById("miners").innerText = automaticUpgrades.miners.quantity
